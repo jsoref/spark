@@ -1063,7 +1063,7 @@ def shiftRightUnsigned(col, numBits):
 def spark_partition_id():
     """A column for partition ID.
 
-    .. note:: This is indeterministic because it depends on data partitioning and task scheduling.
+    .. note:: This is non deterministic because it depends on data partitioning and task scheduling.
 
     >>> df.repartition(1).select(spark_partition_id().alias("pid")).collect()
     [Row(pid=0), Row(pid=0)]
