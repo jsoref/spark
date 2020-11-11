@@ -712,7 +712,7 @@ class SparkContext(object):
             3. If this fails, the fallback is to call 'toString' on each key and value
             4. :class:`PickleSerializer` is used to deserialize pickled objects on the Python side
 
-        :param path: path to sequncefile
+        :param path: path to sequencefile
         :param keyClass: fully qualified classname of key Writable class
                (e.g. "org.apache.hadoop.io.Text")
         :param valueClass: fully qualified classname of value Writable class
