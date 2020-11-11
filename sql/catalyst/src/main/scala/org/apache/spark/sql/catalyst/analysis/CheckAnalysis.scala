@@ -559,7 +559,7 @@ trait CheckAnalysis extends PredicateHelper {
               // no validation needed for set and remove property
             }
 
-          case _ => // Fallbacks to the following checks
+          case _ => // Falls back to the following checks
         }
 
         operator match {
