@@ -119,7 +119,7 @@ RowsGroup.prototype = {
 			var iColumn = previousOrder.indexOf(orderingColumn);
 			if (iColumn >= 0) {
 				// assume change the direction, because we already has that in previous order
-				return [[orderingColumn, this._toogleDirection(this.order[iColumn][1])]]
+				return [[orderingColumn, this._toggleDirection(this.order[iColumn][1])]]
 			} // else This is the new ordering column. Proceed as is.
 		} // else got multi order - work normal
 		return order;
@@ -166,7 +166,7 @@ RowsGroup.prototype = {
 			this._mergeColumn(newSequenceRow, (iRow-1), columnsIndexesCopy)
 	},
 	
-	_toogleDirection: function(dir)
+	_toggleDirection: function(dir)
 	{
 		return dir == 'asc'? 'desc': 'asc';
 	},
