@@ -722,7 +722,7 @@ Oracle facilitates your further distribution of this package by adding
 the Classpath Exception to the necessary parts of its GPLv2 code, which
 permits you to use that code in combination with other independent
 modules not licensed under the GPLv2.  However, note that this would
-not permit you to commingle code under an incompatible license with
+not permit you to comingle code under an incompatible license with
 Oracle's GPLv2 licensed code by, for example, cutting and pasting such
 code into a file also containing Oracle's GPLv2 licensed code and then
 distributing the result.  Additionally, if you were to remove the
