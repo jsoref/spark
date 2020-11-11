@@ -29,7 +29,7 @@ class StreamingQueryStatusListenerSuite extends StreamTest {
   test("onQueryStarted, onQueryProgress, onQueryTerminated") {
     val listener = new StreamingQueryStatusListener(spark.sparkContext.conf)
 
-    // hanlde query started event
+    // handle query started event
     val id = UUID.randomUUID()
     val runId = UUID.randomUUID()
     val startEvent = new StreamingQueryListener.QueryStartedEvent(
