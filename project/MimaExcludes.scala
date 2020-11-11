@@ -730,7 +730,7 @@ object MimaExcludes {
     ProblemFilters.exclude[DirectMissingMethodProblem]("org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment"),
 
     // [SPARK-22324][SQL][PYTHON] Upgrade Arrow to 0.8.0
-    ProblemFilters.exclude[FinalMethodProblem]("org.apache.spark.network.util.AbstractFileRegion.transfered"),
+    ProblemFilters.exclude[FinalMethodProblem]("org.apache.spark.network.util.AbstractFileRegion.transferred"),
 
     // [SPARK-20643][CORE] Add listener implementation to collect app state
     ProblemFilters.exclude[DirectMissingMethodProblem]("org.apache.spark.status.api.v1.TaskData.<init>$default$5"),
