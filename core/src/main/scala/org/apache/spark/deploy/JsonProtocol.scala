@@ -81,7 +81,7 @@ private[deploy] object JsonProtocol {
   }
 
   /**
-   * Export the [[ApplicationInfo]] to a Json objec. An [[ApplicationInfo]] consists of the
+   * Export the [[ApplicationInfo]] to a Json object. An [[ApplicationInfo]] consists of the
    * information of an application.
    *
    * @return a Json object containing the following fields:
