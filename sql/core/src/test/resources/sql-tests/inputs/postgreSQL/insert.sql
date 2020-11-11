@@ -589,26 +589,26 @@ drop table inserttest;
 -- that estate->es_result_relation_info is appropriately set/reset for each
 -- routed tuple)
 -- [SPARK-29718] Support PARTITION BY [RANGE|LIST|HASH] and PARTITION OF in CREATE TABLE
--- create table donothingbrtrig_test (a int, b text) partition by list (a);
--- create table donothingbrtrig_test1 (b text, a int);
--- create table donothingbrtrig_test2 (c text, b text, a int);
--- alter table donothingbrtrig_test2 drop column c;
--- create or replace function donothingbrtrig_func() returns trigger as $$begin raise notice 'b: %', new.b; return NULL; end$$ language plpgsql;
--- create trigger donothingbrtrig1 before insert on donothingbrtrig_test1 for each row execute procedure donothingbrtrig_func();
--- create trigger donothingbrtrig2 before insert on donothingbrtrig_test2 for each row execute procedure donothingbrtrig_func();
--- alter table donothingbrtrig_test attach partition donothingbrtrig_test1 for values in (1);
--- alter table donothingbrtrig_test attach partition donothingbrtrig_test2 for values in (2);
--- insert into donothingbrtrig_test values (1, 'foo'), (2, 'bar');
+-- create table do nothingbrtrig_test (a int, b text) partition by list (a);
+-- create table do nothingbrtrig_test1 (b text, a int);
+-- create table do nothingbrtrig_test2 (c text, b text, a int);
+-- alter table do nothingbrtrig_test2 drop column c;
+-- create or replace function do nothingbrtrig_func() returns trigger as $$begin raise notice 'b: %', new.b; return NULL; end$$ language plpgsql;
+-- create trigger do nothingbrtrig1 before insert on do nothingbrtrig_test1 for each row execute procedure do nothingbrtrig_func();
+-- create trigger do nothingbrtrig2 before insert on do nothingbrtrig_test2 for each row execute procedure do nothingbrtrig_func();
+-- alter table do nothingbrtrig_test attach partition do nothingbrtrig_test1 for values in (1);
+-- alter table do nothingbrtrig_test attach partition do nothingbrtrig_test2 for values in (2);
+-- insert into do nothingbrtrig_test values (1, 'foo'), (2, 'bar');
 -- [SPARK-29386] Copy data between a file and a table
--- copy donothingbrtrig_test from stdout;
+-- copy do nothingbrtrig_test from stdout;
 -- 1	baz
 -- 2	qux
 -- \.
--- select tableoid::regclass, * from donothingbrtrig_test;
+-- select tableoid::regclass, * from do nothingbrtrig_test;
 
 -- cleanup
--- drop table donothingbrtrig_test;
--- drop function donothingbrtrig_func();
+-- drop table do nothingbrtrig_test;
+-- drop function do nothingbrtrig_func();
 
 -- check multi-column range partitioning with minvalue/maxvalue constraints
 -- [SPARK-29718] Support PARTITION BY [RANGE|LIST|HASH] and PARTITION OF in CREATE TABLE
