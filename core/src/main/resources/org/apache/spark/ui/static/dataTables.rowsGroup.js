@@ -209,7 +209,7 @@ $(document).on( 'init.dt', function ( e, settings ) {
 
 /*
 
-TODO: Provide function which determines the all <tr>s and <td>s with "rowspan" html-attribute is parent (groupped) for the specified <tr> or <td>. To use in selections, editing or hover styles.
+TODO: Provide function which determines the all <tr>s and <td>s with "rowspan" html-attribute is parent (grouped) for the specified <tr> or <td>. To use in selections, editing or hover styles.
 
 TODO: Feature
 Use saved order direction for grouped columns
