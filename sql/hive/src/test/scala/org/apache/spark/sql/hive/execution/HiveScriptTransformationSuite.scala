@@ -375,7 +375,7 @@ class HiveScriptTransformationSuite extends BaseScriptTransformationSuite with T
     }
   }
 
-  test("SPARK-32400: TRANSFORM doesn't support CalenderIntervalType/UserDefinedType (hive serde)") {
+  test("SPARK-32400: TRANSFORM doesn't support CalendarIntervalType/UserDefinedType (hive serde)") {
     assume(TestUtils.testCommandAvailable("/bin/bash"))
     withTempView("v") {
       val df = Seq(
@@ -413,7 +413,7 @@ class HiveScriptTransformationSuite extends BaseScriptTransformationSuite with T
   }
 
   test("SPARK-32400: TRANSFORM doesn't support" +
-    " CalenderIntervalType/UserDefinedType end to end (hive serde)") {
+    " CalendarIntervalType/UserDefinedType end to end (hive serde)") {
     assume(TestUtils.testCommandAvailable("/bin/bash"))
     withTempView("v") {
       val df = Seq(
