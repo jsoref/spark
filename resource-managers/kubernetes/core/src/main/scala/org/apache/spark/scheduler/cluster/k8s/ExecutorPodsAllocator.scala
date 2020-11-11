@@ -180,7 +180,7 @@ private[spark] class ExecutorPodsAllocator(
     // It's possible that we have outstanding pods that are outdated when dynamic allocation
     // decides to downscale the application. So check if we can release any pending pods early
     // instead of waiting for them to time out. Drop them first from the unacknowledged list,
-    // then from the pending. However, in order to prevent too frequent frunctuation, newly
+    // then from the pending. However, in order to prevent too frequent fluctuation, newly
     // requested pods are protected during executorIdleTimeout period.
     //
     // TODO: with dynamic allocation off, handle edge cases if we end up with more running
