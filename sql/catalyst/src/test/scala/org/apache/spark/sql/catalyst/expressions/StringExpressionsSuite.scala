@@ -422,7 +422,7 @@ class StringExpressionsSuite extends SparkFunSuite with ExpressionEvalHelper {
     checkEvaluation(SoundEx(Literal("Uhrbach")), "U612")
     checkEvaluation(SoundEx(Literal("Moskowitz")), "M232")
     checkEvaluation(SoundEx(Literal("Moskovitz")), "M213")
-    checkEvaluation(SoundEx(Literal("relyheewsgeessg")), "R422")
+    checkEvaluation(SoundEx(Literal("reltheewsgeessg")), "R422")
     checkEvaluation(SoundEx(Literal("!!")), "!!")
   }
 
