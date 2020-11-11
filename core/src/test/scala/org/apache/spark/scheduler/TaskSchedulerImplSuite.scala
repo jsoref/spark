@@ -689,7 +689,7 @@ class TaskSchedulerImplSuite extends SparkFunSuite with LocalSparkContext with B
     // * stage 0 is blacklisted on node "host1"
     // * stage 1 is blacklisted on executor "executor3"
     // * stage 0, partition 0 is blacklisted on executor 0
-    // (mocked methods default to returning false, ie. no blacklisting)
+    // (mocked methods default to returning false, i.e. no blacklisting)
     when(stageToMockTaskSetBlacklist(0).isNodeBlacklistedForTaskSet("host1")).thenReturn(true)
     when(stageToMockTaskSetBlacklist(1).isExecutorBlacklistedForTaskSet("executor3"))
       .thenReturn(true)
