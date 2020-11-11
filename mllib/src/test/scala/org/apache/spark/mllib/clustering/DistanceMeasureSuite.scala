@@ -63,13 +63,13 @@ class DistanceMeasureSuite extends SparkFunSuite with MLlibTestSparkContext {
     }
   }
 
-  test("compute statistics distributedly") {
+  test("compute statistics distributively") {
     Seq(DistanceMeasure.COSINE, DistanceMeasure.EUCLIDEAN).foreach { distanceMeasure =>
       val distance = DistanceMeasure.decodeFromString(distanceMeasure)
       val statistics1 = distance.computeStatistics(centers)
       val sc = spark.sparkContext
       val bcCenters = sc.broadcast(centers)
-      val statistics2 = distance.computeStatisticsDistributedly(sc, bcCenters)
+      val statistics2 = distance.computeStatisticsDistributively(sc, bcCenters)
       bcCenters.destroy()
       assert(Vectors.dense(statistics1) ~== Vectors.dense(statistics2) relTol 1E-10)
     }

@@ -275,7 +275,7 @@ class KMeans private (
     while (iteration < maxIterations && !converged) {
       val bcCenters = sc.broadcast(centers)
       val stats = if (shouldDistributed) {
-        distanceMeasureInstance.computeStatisticsDistributedly(sc, bcCenters)
+        distanceMeasureInstance.computeStatisticsDistributively(sc, bcCenters)
       } else {
         distanceMeasureInstance.computeStatistics(centers)
       }

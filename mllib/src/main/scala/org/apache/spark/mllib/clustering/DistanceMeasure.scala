@@ -78,7 +78,7 @@ private[spark] abstract class DistanceMeasure extends Serializable {
   /**
    * Compute distance between centers in a distributed way.
    */
-  def computeStatisticsDistributedly(
+  def computeStatisticsDistributively(
       sc: SparkContext,
       bcCenters: Broadcast[Array[VectorWithNorm]]): Array[Double] = {
     val k = bcCenters.value.length
