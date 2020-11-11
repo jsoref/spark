@@ -301,7 +301,7 @@ class DataSourceV2SQLSuite
     assert(t2.v1Table.provider == Some(conf.defaultDataSourceName))
   }
 
-  test("CreateTable/RepalceTable: invalid schema if has interval type") {
+  test("CreateTable/ReplaceTable: invalid schema if has interval type") {
     Seq("CREATE", "REPLACE").foreach { action =>
       val e1 = intercept[AnalysisException](
         sql(s"$action TABLE table_name (id int, value interval) USING $v2Format"))
